@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Седона - небольшой городок в Аризоне, заслуживающий большего!</title>
+	<meta name="keywords" content="Седона, Аризона, Путешествие">
+	<meta name="description" content="Сервис поиска лучших предложений гостиниц в Седоне">
+	<!-- <link href="style.css" rel="stylesheet"> -->
+</head>
+
+<body> 
+	<!-- Блок для шапки -->
+	<header class="main-header"> 
+		<nav class="navigation"> 
+			<ul class="navigation-list">
+				<div class="navigation-list-left">
+					<li><a href="#">Информация</a></li>
+					<li><a href="#">Фото и видео</a></li>
+				</div>
+				<!-- Для лого поставить в CSS  overflow:hidden чтобы элемент вылезал???? -->
+				<div class="navigation-logo">
+					<li><a href="#"><img src="http://placehold.it/140x149" alt="sedona logo" width="138" height="56"></a></li>
+				</div>
+				<div class="navigation-list-right">
+					<li><a href="#">Карта штата</a></li> 
+					<li><a href="#">Гостиницы</a></li>
+				</div>
+			</ul> 
+		</nav>
+	</header>
+	
+	<!-- Блок для основного контейнера -->
+	<div class="container">
+	
+		<!-- Блок картинки под шапкой -->
+		<div class="intro-main">
+			<img src="http://placehold.it/1200x508" alt="sedona" width="1200" height="508">
+			<div class="piture-main-logo">		
+				<img src="http://placehold.it/458x352" alt="sedona" width="458" height="352">
+			</div>
+			<div class="piture-main-bijou">
+				<img src="http://placehold.it/1200x57" alt="sedona" width="1200" height="57">
+			</div>
+		</div>
+		
+		<!-- Блок для контента -->
+		<div class="content">
+		
+			<!-- Блок для текста -->
+			<div class="one-column-content-block">
+				<h1 class="page-title">Cедона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+				<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>				
+			</div>
+		
+			<!-- Блок причина 1 -->
+			<div class="two-column-content-block">
+				<div class="two-column-content-block-text">
+					<h2 class="white-on-blue-bg">Настоящий городок</h2>
+					<p>&mdash; №1 &mdash;</p>
+					<p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+				</div>
+				<div class="two-column-content-block-picture">
+					<img src="http://placehold.it/800x256" alt="sedona" width="800" height="256">
+				</div>
+			</div>
+		
+			<!-- Блок жилье еда сувениры -->
+			<div class="tree-column-content-block">
+				<div class="left-column">
+					<div class="sedona-feature-icon"><img src="http://placehold.it/75x76" alt="icon" width="75" height="76"></div>
+					<div class="sedona-feature-title">Жилье</div>
+					<div class="sedona-feature-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
+				</div>
+				<div class="center-column">
+					<div class="sedona-feature-icon"><img src="http://placehold.it/75x76" alt="icon" width="75" height="76"></div>
+					<div class="sedona-feature-title">Еда</div>
+					<div class="sedona-feature-description">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</div>
+				</div>
+				<div class="right-column">
+					<div class="sedona-feature-icon"><img src="http://placehold.it/75x76" alt="icon" width="75" height="76"></div>
+					<div class="sedona-feature-title">Сувениры</div>
+					<div class="sedona-feature-description">Не только китайского, но и местного производства!</div>
+				</div>
+			</div>
+		
+			<!-- Блок причина 2 -->
+			<div class="two-column-content-block">
+				<div class="two-column-content-block-picture">
+					<img src="http://placehold.it/800x256" alt="sedona" width="800" height="256">
+				</div>
+				<div class="two-column-content-block-text">
+					<h2 class="white-on-blue-bg">Там есть мост дьявола</h2>
+					<p>&mdash; №2 &mdash;</p>
+					<p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+				</div>
+			</div>
+		
+			<!-- Блок причина 3-5 -->
+			<div class="tree-column-content-block greybg">
+				<div class="left-column">
+					<h2 class="black-on-grey-bg">Небольшая площадь</h2>
+					<p>&mdash; №3 &mdash;</p>
+					<p>Все достопримеча-<br>тельности находятся очень близко</p>
+				</div>
+				<div class="center-column">
+					<h2 class="black-on-grey-bg">Красивая дорога</h2>
+					<p>&mdash; №4 &mdash;</p>
+					<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+				</div>
+				<div class="right-column">
+					<h2 class="black-on-grey-bg">Мало туристов</h2>
+					<p>&mdash; №5 &mdash;</p>
+					<p>Большинство едет в Гранд Каньон и толпится там</p>
+				</div>
+			</div>
+			
+			<!-- Блок заинтересовались -->
+			<div class="one-column-content-block">
+				<p class="request ">Заинтересовались?</p>
+				<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+				<div class="search-form">
+					<button class="btn-brown" type="button" onclick="ShowSearchForm">Поиск гостиницы в Седоне</button>
+					<div class="search-form-bg">
+						<form action="#" method="post" action=""> <!-- post или get??? -->
+							<label for="ch1">Дата заезда:</label>
+							<input class="booking-calendar" name="checkin" type="text" placeholder="24 апреля 2014" id="ch1"/>
+														
+							<label for="ch2">Дата выезда:</label>
+							<input class="booking-calendar" name="checkout" type="text" placeholder="4 июля 2014" id="ch2"/>
+							
+							<label for="ch3">Взрослые:</label>
+							<button class="btn-grey" type="button" onclick="MinusAmountForm">-</button>
+							<input class="booking-calendar" name="adults" type="text" placeholder="2" id="ch3"/>
+							<button class="btn-grey" type="button" onclick="PlusAmountForm">+</button>
+							
+							<label for="ch3">Дети:</label>
+							<button class="btn-grey" type="button" onclick="MinusAmountForm">-</button>
+							<input class="booking-calendar" name="children" type="text" placeholder="0" id="ch3"/>
+							<button class="btn-grey" type="button" onclick="PlusAmountForm">+</button>					
+							
+							<button class="btn-blue" type="submit">Найти</button>							
+						</form>						
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<!-- Блок для карты -->
+		<div class="map">
+		<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=iN3H-8RH7ahKfPX6O0-gqOYyS_qAWI2g&width=1200&height=473&lang=ru_RU&sourceType=constructor"></script>
+		</div>
+		
+	</div>
+	
+	<!-- Блок для футера -->
+	<footer class="main-footer"> 
+		<div class="left-column copyright">
+			<p>#visitsedona</p>
+		</div>
+		<div class="center-column footer-social">
+			<a href="#" class="social-btn"><i class="icon-vk"></i></a>
+			<a href="#" class="social-btn"><i class="icon-facebook"></i></a>
+			<a href="#" class="social-btn"><i class="icon-instagram"></i></a>
+		</div>
+		<div class="right-column htmlacademy">
+			<p>website by<a href="#"><img src="http://placehold.it/113x39" alt="htmlacademy logo" width="113" height="39"></a></p>
+		</div>
+	</footer>
+  
+ </body> 
+</html>
