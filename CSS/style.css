@@ -1,0 +1,40 @@
+body {
+  font-family: "PT Sans";
+  font-size: 14px;
+  font-weight: normal;
+  color: #333333;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+h1.reasons-title {
+  font-size: 21px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 26px;
+}
+
+h2.hotel-title {
+  font-size: 21px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 26px;
+}
+
+h2.search-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 24px;
+}
+
+h2.reason-title {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 21px;
+  color: #000000;
+}
+
+.reason-row-image h2 {
+  color: #ffffff;
+}
