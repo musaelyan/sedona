@@ -1,40 +1,254 @@
 body {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   color: #333333;
   line-height: normal;
   text-transform: uppercase;
+  background-color: #f2f2f2;
 }
 
-h1.reasons-title {
+.wrapper {
+  width: 1200px;
+  margin-left:auto;
+  margin-right: auto;
+  background-color: white;
+
+}
+
+.main-header {
+  background-color: white;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
+
+}
+
+.main-navigation ul {
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-top: 19px;
+  padding-bottom: 23px;
+}
+
+.main-navigation li {
+  display:inline-block;
+}
+
+.main-navigation a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-navigation a:link, .main-navigation a:visited {
+  color: black;
+}
+
+.main-navigation a:hover {
+  color: #81b3d2
+}
+
+.main-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+.logo {
+  width: 138px;
+  height: 70px;
+  margin-left:auto;
+  margin-right: auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -69px;
+
+}
+
+.promo {
+  background: #d9eaf2 url("../img/welcome-sedona-bg.jpg");
+  width: 1200px;
+  height: 508px;
+}
+
+.promo img {
+  width: 458px;
+  height: 352px;
+  position:relative;
+  left: 50%;
+  top: 76px;
+  margin-left: -229px;
+}
+
+.promo:after {
+  width: 1200px;
+  height: 57px;
+  content: url("../img/zigzag.png");
+  position:relative;
+  bottom: -95px;
+}
+
+.reasons {
+  text-align: center;
+}
+
+.reasons-header {
+  background-color: white;
+  padding-left: 312px;
+  padding-right: 312px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.reasons-header h1 {
   font-size: 21px;
   font-weight: bold;
   color: #000000;
   line-height: 26px;
+  padding: 0px;
+  margin: 0px;
+  padding-bottom: 17px;
 }
 
-h2.hotel-title {
+
+.reason-row h2,
+.reason-row p,
+figure {
+  padding: 0px;
+  margin: 0px;
+}
+
+.reason-row {
+  background-color: white;
+  font-size: 0px;
+}
+
+.reason {
+  width: 280px;
+  font-size: 14px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.reason-image {
+  width: 800px;
+  height: 256px;
+}
+
+.reason-image,
+.reason {
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.reason h2 {
   font-size: 21px;
   font-weight: bold;
+  line-height: 21px;
   color: #000000;
-  line-height: 26px;
+  padding-top: 47px;
+  padding-bottom: 24px;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
-h2.search-title {
+.reason-number {
+  padding-bottom: 23px;
+}
+
+.reason p {
+  padding-bottom: 61px;
+}
+
+.reason-row-image {
+  background-color: #81b3d2;
+  color: white;
+}
+
+.reason-row-image h2 {
+  color: #ffffff;
+}
+
+.reason-row-gray {
+  background-color: #eeeeee;
+}
+
+.reason-icon {
+  height: 76px;
+  width: 76px;
+  position: relative;
+  left: 50%;
+  margin-left: -38px;
+  padding-top: 37px;
+  top: 56px;
+}
+
+.reason-image-home {
+  background: url("../img/home.png") no-repeat;
+}
+
+.reason-image-food {
+  background: url("../img/food.png") no-repeat;
+}
+
+.reason-image-gift {
+  background: url("../img/gift.png") no-repeat;
+}
+
+
+.search {
+  background-color: white;
+  padding-top: 46px;
+  padding-bottom: 42px;
+  padding-left: 312px;
+  padding-right: 312px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.search h2 {
   font-size: 30px;
   font-weight: bold;
   color: #000000;
   line-height: 24px;
 }
 
-h2.reason-title {
-  font-size: 21px;
+.search a {
+  text-decoration: none;
   font-weight: bold;
-  line-height: 21px;
-  color: #000000;
+  font-size: 21px;
+  padding: 30px 130px;
 }
 
-.reason-row-image h2 {
-  color: #ffffff;
+
+.search a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 21px;
+  padding: 30px 130px;
+}
+
+.search a:link, .main-navigation a:visited {
+  color: white;
+  background-color: #766357;
+}
+
+.search a:hover {
+  color: #81b3d2
+}
+
+.search a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+h2.hotel-title {
+  font-size: 21px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 26px;
 }
