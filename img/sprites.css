@@ -1,0 +1,76 @@
+.home, .food, .gift, .logo1, .logo2, .logo3, .tw1, .tw2, .fb1, .fb2, .inst1, .inst2{
+	background: url(sprites.png) no-repeat;
+}
+
+.home{
+	background-position: -185px -7px ;
+	width: 76px;
+	height: 76px;
+}
+
+.food{
+	background-position: -93px -2px ;
+	width: 76px;
+	height: 76px;
+}
+
+.gift{
+	background-position: 0 0;
+	width: 76px;
+	height: 76px;
+}
+
+.logo1{
+	background-position: -5px -105px ;
+	width: 113px;
+	height: 39px;
+}
+
+.logo2{
+	background-position: -144px -103px ;
+	width: 113px;
+	height: 39px;
+}
+
+.logo3{
+	background-position: -5px -160px ;
+	width: 113px;
+	height: 39px;
+}
+
+.tw1{
+	background-position: -184px -159px ;
+	width: 17px;
+	height: 15px;
+}
+
+.tw2{
+	background-position: -143px -154px ;
+	width: 17px;
+	height: 15px;
+}
+
+.fb1{
+	background-position: -46px -213px ;
+	width: 10px;
+	height: 19px;
+}
+
+.fb2{
+	background-position: -6px -212px ;
+	width: 10px;
+	height: 19px;
+}
+
+.inst1{
+	background-position: -198px -198px ;
+	width: 20px;
+	height: 16px;
+}
+
+.inst2{
+	background-position: -139px -198px ;
+	width: 20px;
+	height: 16px;
+}
+
