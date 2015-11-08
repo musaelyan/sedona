@@ -28,7 +28,7 @@
 			</header>
 
 			<!-- Блок картинки c фильтрами -->
-			<div class="filters">
+			<div class="filters clearfix">
 				<form action="#" method="get" action="">
 					<div class="filters-column">
 						<p class="filters-title">Инфраструктура</p>
@@ -53,26 +53,27 @@
 					<div class="filters-price">
 						<p class="filters-title">Стоимость в сутки (Р):</p>
 						<div class="price-frame">
-							от <input class="min-price" type="text" value="0">
-							до <input class="max-price" type="text" value="3000">
+							<div class="price-frame-input">от <input class="min-price" type="text" value="0"></div>
+							<div class="price-frame-input-line"></div>
+							<div class="price-frame-input">до <input class="max-price" type="text" value="3000"></div>
 						</div>
 						<div class="range-controls">
-							<div class="scale"><div style="width:240px;" class="bar"></div></div>
+							<div class="scale"><div class="bar"></div></div>
 							<div class="toggle min-toggle"></div>
 							<div class="toggle max-toggle"></div>
 						</div>
+						<button class="btn-transparent" type="submit">Показать</button>
 					</div>
-					<button class="btn-transparent" type="submit">Показать</button>
 				</form>
 			</div>
 
 			<!-- Блок найдено, сортировка -->
-			<div class="search-results">
+			<div class="search-results clearfix">
 				<div class="search-results-left">Найдено: 3</div>
 				<div class="search-results-center">
-					<ul class="sort-search-results">
+					<ul>
 						<li>Сортировка</li>
-						<li><a href="#">По цене</a></li>
+						<li class="search-results-sort-active"><a href="#">По цене</a></li>
 						<li><a href="#">По типу</a></li>
 						<li><a href="#">По рейтингу</a></li>
 					</ul>
@@ -84,19 +85,10 @@
 			</div>
 
 			<!-- блок отелей -->
-			<section class="hotel">
+			<section class="hotel clearfix">
 				<figure class="hotel-image"><img src="img\hotel1.jpg" alt="icon" width="135" height="90"></figure>
-				<div class="hotel-rating">
-					<div class="rating-stars">
-						<div class="star-five"></div>
-						<div class="star-five"></div>
-						<div class="star-five"></div>
-						<div class="star-five"></div>
-					</div>
-					<p class="rating-nubmers">Рейтинг: 8,5</p>
-				</div>
 				<div class="hotel-content">
-					<h2 class="hotel-title">Amara Resort & Spa</h2>
+					<a href="#" class"link-title"><h2 class="hotel-title">Amara Resort & Spa</h2></a>
 					<div class="hotel-btn">
 						<div class="type">Гостиница</div>
 						<a href="#" class="btn-blue">Подробнее</a>
@@ -106,19 +98,21 @@
 						<a href="#" class="btn-brown">Забронировать</a>
 					</div>
 				</div>
-			</section>
-
-			<section class="hotel">
-				<figure class="hotel-image"><img src="img\hotel2.jpg" alt="icon" width="135" height="90"></figure>
 				<div class="hotel-rating">
 					<div class="rating-stars">
 						<div class="star-five"></div>
 						<div class="star-five"></div>
+						<div class="star-five"></div>
+						<div class="star-five"></div>
 					</div>
-					<p class="rating-nubmers">Рейтинг: 8,9</p>
+					<p class="rating-nubmers">Рейтинг: 8,5</p>
 				</div>
+			</section>
+
+			<section class="hotel clearfix">
+				<figure class="hotel-image"><img src="img\hotel2.jpg" alt="icon" width="135" height="90"></figure>
 				<div class="hotel-content">
-					<h2 class="hotel-title">Desert Quail Inn</h2>
+					<a href="#" class"link-title"><h2 class="hotel-title">Desert Quail Inn</h2></a>
 					<div class="hotel-btn">
 						<div class="type">Мотель</div>
 						<a href="#" class="btn-blue">Подробнее</a>
@@ -128,20 +122,19 @@
 						<a href="#" class="btn-brown">Забронировать</a>
 					</div>
 				</div>
-			</section>
-
-			<section class="hotel">
-				<figure class="hotel-image"><img src="img\hotel3.jpg" alt="icon" width="135" height="90"></figure>
 				<div class="hotel-rating">
 					<div class="rating-stars">
 						<div class="star-five"></div>
 						<div class="star-five"></div>
-						<div class="star-five"></div>
 					</div>
-					<p class="rating-nubmers">Рейтинг: 9,2</p>
+					<p class="rating-nubmers">Рейтинг: 8,9</p>
 				</div>
-				<div class="hotel-content">
-					<h2 class="hotel-title">Villas at Poco Diablo</h2>
+			</section>
+
+			<section class="hotel clearfix">
+				<figure class="hotel-image"><img src="img\hotel3.jpg" alt="icon" width="135" height="90"></figure>
+				<div class="hotel-content clearfix">
+					<a href="#" class"link-title"><h2 class="hotel-title">Villas at Poco Diablo</h2></a>
 					<div class="hotel-btn">
 						<div class="type">Апартаменты</div>
 						<a href="#" class="btn-blue">Подробнее</a>
@@ -150,6 +143,14 @@
 						<div class="price">от 4000 р.</div>
 						<a href="#" class="btn-brown">Забронировать</a>
 					</div>
+				</div>
+				<div class="hotel-rating">
+					<div class="rating-stars">
+						<div class="star-five"></div>
+						<div class="star-five"></div>
+						<div class="star-five"></div>
+					</div>
+					<p class="rating-nubmers">Рейтинг: 9,2</p>
 				</div>
 			</section>
 
