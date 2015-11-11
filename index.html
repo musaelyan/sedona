@@ -6,8 +6,8 @@
 		<meta name="keywords" content="Седона, Аризона, Путешествие">
 		<meta name="description" content="Сервис поиска лучших предложений гостиниц в Седоне">
 		<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-		<link href="css/normalize.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
 
 	</head>
 
@@ -17,7 +17,7 @@
 			<!-- Хедер-->
 			<header class="main-header">
 				<nav class="main-navigation">
-					<figure class="logo"><img src="img\logo.png" alt="" width="138" height="70"></figure>
+					<figure class="logo"><a href="#"><img src="img/logo.png" alt="logo" width="138" height="70"></a></figure>
 					<ul>
 						<li><a href="#">Информация</a></li>
 						<li class="offset"><a href="#">Фото и видео</a></li>
@@ -30,7 +30,7 @@
 
 			<!-- для класса промо в CSS поставить бекграундом картинку, зигзаги как псевдоэлемент и лого как img-->
 			<div class="promo">
-				<img src="img\welcome-sedona.png" alt="welcome sedona" width="458" height="352">
+				<img src="img/welcome-sedona.png" alt="welcome sedona" width="458" height="352">
 			</div>
 
 			<article class="reasons">
@@ -44,10 +44,10 @@
 					<div class="reason">
 						<h2 class="reason-title">Настоящий городок</h2>
 						<div class="reason-number">– №1 –</div>
-						<p>Седона - не аттракцион для туристов, там течет своя жизнь </p>
+						<p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
 					</div>
 					<figure class="reason-image">
-						<img src="img\reason1.jpg" alt="" width="800" height="256">
+						<img src="img/reason1.jpg" alt="reason-picture" width="800" height="256">
 					</figure>
 				</div>
 
@@ -68,7 +68,7 @@
 
 				<div class="reason-row reason-row-image">
 					<figure class="reason-image">
-						<img src="img\reason2.jpg" alt="" width="800" height="256">
+						<img src="img/reason2.jpg" alt="reason-picture" width="800" height="256">
 					</figure>
 					<div class="reason">
 						<h2 class="reason-title">Там есть мост дьявола</h2>
@@ -108,37 +108,48 @@
 				</div>
 
 				<div class="form">
-					<form action="" method="">
-						<label for="ch1">Дата заезда:</label>
-						<input class="booking-calendar" name="checkin" type="text" placeholder="24 апреля 2014" id="ch1"/>
+					<form class="form-booking-find" action="" method="">
 
-						<label for="ch2">Дата выезда:</label>
-						<input class="booking-calendar" name="checkout" type="text" placeholder="4 июля 2014" id="ch2"/>
+						<div class="input-line">
+							<label for="ch1">Дата заезда: <i class="icon-calendar"></i></label>
+							<input class="booking-calendar" name="checkin" type="text" placeholder="24 апреля 2014" id="ch1"/>
+						</div>
 
-						<label for="ch3">Взрослые:</label>
-						<button class="btn-grey" type="button">-</button>
-						<input class="booking-calendar" name="adults" type="text" placeholder="2" id="ch3"/>
-						<button class="btn-grey" type="button">+</button>
+						<div class="input-line">
+							<label for="ch2">Дата выезда: <i class="icon-calendar"></i></label>
+							<input class="booking-calendar" name="checkout" type="text" placeholder="4 июля 2014" id="ch2"/>
+						</div>
 
-						<label for="ch3">Дети:</label>
-						<button class="btn-grey" type="button">-</button>
-						<input class="booking-calendar" name="children" type="text" placeholder="0" id="ch3"/>
-						<button class="btn-grey" type="button">+</button>
+						<div class="input-line">
+							<div class="input-line-adults">
+								<label for="ch3">Взрослые:</label>
+								<div class="booking-calendar-minus-plus">
+									<button class="btn-grey" type="button"><i class="icon-minus"></i></button>
+									<input class="booking-calendar-select" name="adults" type="text" placeholder="2" id="ch3"/>
+									<button class="btn-grey" type="button"><i class="icon-plus"></i></button>
+								</div>
+							</div>
 
-						<button class="btn-blue" type="submit">Найти</button>
+							<label for="ch4">Дети:</label>
+							<div class="booking-calendar-minus-plus">
+								<button class="btn-grey" type="button"><i class="icon-minus"></i></button>
+								<input class="booking-calendar-select" name="children" type="text" placeholder="0" id="ch4"/>
+								<button class="btn-grey" type="button"><i class="icon-plus"></i></button>
+							</div>
+					</div>
+
+						<button class="form-btn-blue btn-blue" type="submit">Найти</button>
 					</form>
 				</div>
 
 				<footer class="main-footer">
 					<a href="#" class="hashtag">#visitsedona</a>
 					<div class="social">
-						<a href="#" class="social-btn"><i class="icon-vk"></i></a>
+						<a href="#" class="social-btn"><i class="icon-twitter"></i></a>
 						<a href="#" class="social-btn"><i class="icon-facebook"></i></a>
-						<a href="#" class="social-btn"><i class="icon-instagram"></i></a>
+						<a href="#" class="social-btn"><i class="icon-youtube"></i></a>
 					</div>
-					<div class="autor">
-						website by<a href="#"><img src="img\htmlacademy-logo.png" alt="htmlacademy logo" width="113" height="39"></a>
-					</div>
+					<div class="autor">website by<a href="#"></a></div>
 				</footer>
 			</div>
 

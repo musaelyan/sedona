@@ -1,5 +1,72 @@
+@font-face {
+  font-family: 'symbols-sedona';
+  src: url('../font/symbols-sedona.eot?60737633');
+  src: url('../font/symbols-sedona.eot?60737633#iefix') format('embedded-opentype'),
+       url('../font/symbols-sedona.woff?60737633') format('woff'),
+       url('../font/symbols-sedona.ttf?60737633') format('truetype'),
+       url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'symbols-sedona';
+    src: url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
+  }
+}
+*/
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "symbols-sedona";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-facebook:before { content: '\66'; } /* 'f' */
+.icon-twitter:before { content: '\74'; } /* 't' */
+.icon-up-dir:before { content: '\25b2'; } /* '▲' */
+.icon-down-dir:before { content: '\25bc'; } /* '▼' */
+.icon-star:before { content: '\2605'; } /* '★' */
+.icon-check-off:before { content: '\2610'; } /* '☐' */
+.icon-check-on:before { content: '\2611'; } /* '☑' */
+.icon-calendar:before { content: '\e800'; } /* '' */
+.icon-plus:before { content: '\e801'; } /* '' */
+.icon-minus:before { content: '\e802'; } /* '' */
+.icon-youtube:before { content: '\f39e'; } /* '' */
+
+
+  /* ------------------ стили для страниц ------------------ */
+
 body {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: normal;
   color: #333333;
@@ -14,9 +81,7 @@ body {
   margin-left:auto;
   margin-right: auto;
   background-color: white;
-  moz-box-shadow: 0 0 5px 0 #d4d4d4;
-  -webkit-box-shadow: 0 0 5px 0 #d4d4d4;
-  box-shadow: 0 0 5px 0 #d4d4d4;
+  box-shadow: 0 -5px 9px 2px #dbdbdb;
   position: relative;
 }
 
@@ -38,6 +103,7 @@ body {
   padding-right: 72px;
   padding-top: 17px;
   padding-bottom: 19px;
+  text-align: center;
 }
 
 .main-navigation li {
@@ -54,7 +120,7 @@ body {
 }
 
 .main-navigation .offset {
-  margin-right: 383px;
+  margin-right: 390px;
 }
 
 .main-navigation li:last-child {
@@ -301,9 +367,77 @@ figure {
   top: 0px;
   left: 316px;
   padding: 55px;
-  moz-box-shadow: 0 0 5px 0 #d4d4d4;
-  -webkit-box-shadow: 0 0 5px 0 #d4d4d4;
-  box-shadow: 0 0 5px 0 #d4d4d4;
+  box-shadow: 0px 2px 5px 0px #D4D2D2;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+
+}
+
+input.booking-calendar[type="text"] {
+  margin-left: 20px;
+  background: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  padding: 4px 15px;
+  width: 281px;
+  margin-bottom: 20px;
+  padding-right: 40px;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
+  line-height: 26px;
+  outline: none;
+}
+
+input.booking-calendar:focus {
+  border-color: 2px solid #e5e5e5;
+  background: white;
+}
+
+input.booking-calendar:hover {
+  background: #ebebeb;
+  border-color: 2px solid #ebebeb;
+}
+
+.icon-calendar {
+  color: #c2c2c2;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  font-size: 20px;
+  left: 480px;
+  margin-top: 5px;
+}
+
+.icon-calendar:hover {
+  color: black;
+}
+
+.icon-calendar:active {
+  color: #81b3d2;
+}
+
+.input-line {
+  margin-bottom: 10px;
+}
+
+.booking-calendar-minus-plus {
+  display: inline-block;
+  vertical-align: middle;
+  background: #f2f2f2;
+  margin-left: 27px;
+}
+
+.input-line-adults {
+  padding-right: 38px;
+  display: inline-block;
+}
+
+.input-line-adults .booking-calendar-minus-plus {
+  margin-left: 39px;
 }
 
 .form .btn-grey {
@@ -311,24 +445,52 @@ figure {
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 14px;
     color: #a9a9a9;
-    font-weight: 700;
+    font-weight: normal;
     width: 38px;
     height: 38px;
     text-align: center;
-
+    vertical-align: middle;
 }
 
-.form .btn-blue {
-  background: #81b3d2;
+.form .btn-grey:hover {
+  color: black;
+}
+
+.form .btn-grey:active {
+  color: #81b3d2;
+}
+
+
+input.booking-calendar-select[type="text"] {
+  background: #f2f2f2;
+  border: none;
+  width: 30px;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
+  line-height: 26px;
+  outline: none;
+}
+
+
+
+.form-btn-blue {
   border: none;
   outline: none;
   cursor: pointer;
   font-size: 21px;
-  color: white;
-  font-weight: 700;
+  font-weight: bold;
   text-align: center;
+  text-transform: uppercase;
+  padding: 15px 196px;
+  display: block;
+  margin-top: 54px;
 }
 
 
@@ -339,9 +501,8 @@ figure {
   background: rgba(254, 254, 254, 0.9);
   bottom: 0px;
   left: 0px;
-  /* height: 120px; */
   font-size: 0;
-  padding: 30px 0;
+  padding: 36px 0;
 }
 
 .map .main-footer {
@@ -349,52 +510,51 @@ figure {
 }
 
 .hashtag {
-  /* position: absolute; */
   color: black;
   font-weight: bold;
   font-size: 21px;
   text-decoration: none;
-  /* left: 133px; */
-  /* top: 51px; */
   display: inline-block;
   vertical-align: middle;
   width: 33.3333333%;
   text-align: center;
-  font-size: 14px;
 }
 
 
-.main-footer .social {
-  /* position: absolute; */
+.social {
   font-size: 0px;
-  /* left: 521px; */
-  /* top: 36px; */
   display: inline-block;
   vertical-align: middle;
   width: 33.3333333%;
   text-align: center;
-  font-size: 14px;
 }
 
-.main-footer .social a.social-btn {
-  width: 46px;
-  height: 48px;
+.social a.social-btn {
+  width: 42px;
+  height: 18px;
   background: #81b3d2;
   display: inline-block;
-  margin-right: 7px;
+  font-size: 20px;
+  color: white;
+  margin-right: 6px;
+  vertical-align: middle;
+  padding: 15px 2px;
+  line-height: 1em;
 }
 
-.main-footer .social a.social-btn:hover {
+.social a.social-btn:hover {
   background: #669ec0;
 }
 
+.social a.social-btn:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .main-footer .autor {
-  /* position: absolute; */
   color: black;
   font-size: 14px;
   text-decoration: none;
-  /* left: 903px; */
-  /* top: 41px; */
   display: inline-block;
   vertical-align: middle;
   width: 33.3333333%;
@@ -402,20 +562,33 @@ figure {
 }
 
 .main-footer .autor a {
-  /* position: absolute; */
-  /* top: -7px; */
-  /* left: 85px; */
   display: inline-block;
   vertical-align: middle;
   text-align: center;
   font-size: 14px;
+  width: 113px;
+  height: 39px;
+  background: url("../img/sprites.png") no-repeat;
+  background-position: -283px 0;
+  margin-left: 8px;
+}
+
+.main-footer .autor a:hover {
+  background: url("../img/sprites.png") no-repeat;
+  background-position: -281px -47px ;
+}
+
+.main-footer .autor a:active {
+  background: url("../img/sprites.png") no-repeat;
+  background-position: -283px 0;
+  opacity: 0.3;
 }
 
 
   /* ------------------ блок для cтраницы поиска отелей ------------------ */
 
 .filters {
-  background: #d9eaf2 url("../img/filters-hotels.jpg") no-repeat;
+  background: #766357 url("../img/filters-hotels.jpg") no-repeat;
   width: 1056px;
   height: 191px;
   color: white;
@@ -449,6 +622,41 @@ figure {
   padding: 0px;
   padding-bottom: 12px;
 }
+
+.filters input[type="checkbox"] {
+  display: none;
+}
+
+.filters input[type="checkbox"] + label {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filters input[type="checkbox"] + label:before {
+  content: '\2610';
+  margin-right: 17px;
+  font-family: "symbols-sedona";
+  font-size: 24px;
+  color: white;
+  opacity: 0.7;
+}
+
+.filters input[type="checkbox"]:hover + label:before {
+  opacity: 1;
+}
+
+.filters input[type="checkbox"]:checked + label:before {
+  content: '\2611';
+}
+
+.filters input[type="checkbox"]:disabled + label:before {
+  opacity: 0.3;
+}
+
+.filter-checkbox {
+  margin-top: 12px;
+}
+
 
 .price-frame {
   border: 2px solid white;
@@ -627,6 +835,40 @@ figure {
   border-bottom: none;
 }
 
+.search-results-right {
+  font-size: 0px;
+  text-align: right;
+  margin-right: -8px;
+  position: relative;
+  top: 3px;
+}
+
+.icon-up-dir {
+  font-size: 20px;
+}
+
+.icon-down-dir {
+  font-size: 20px;
+}
+
+.arrow {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.arrow:hover {
+  color: #000000;
+}
+
+.arrow:active {
+  color: #81b3d2;
+}
+
+.arrow-active {
+  color: #81b3d2;
+  text-decoration: none;
+}
+
 .hotel-image {
   width: 135px;
   height: 90px;
@@ -636,7 +878,7 @@ figure {
   width: 700px;
 }
 
-h2.hotel-title {
+.hotel-content > a {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -645,18 +887,14 @@ h2.hotel-title {
   margin-top: -6px;
   color: #000000;
   text-decoration: none;
+  display: block;
 }
 
-a.link-title {
-color: #000000;
-text-decoration: none;
-}
-
-a.link-title:hover {
+.hotel-content > a:hover {
 color: #81b3d2;
 }
 
-.link-title a:active {
+.hotel-content > a:active {
 color: rgba(0, 0, 0, 0.3);
 }
 
@@ -698,4 +936,30 @@ color: rgba(0, 0, 0, 0.3);
 .btn-blue:active {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel-rating {
+  text-align: right;
+}
+
+.rating-stars {
+  font-size: 0px;
+  margin-top: -6px;
+  margin-right: -4px;
+}
+
+.icon-star {
+  color: #81b3d2;
+  font-size: 18px;
+}
+
+.hotel-rating p {
+  color: #666666;
+  font-size: 14px;
+  background: #f2f2f2;
+  margin: 0px;
+  padding:0px;
+  padding: 5px 16px;
+  margin-right: 2px;
+  margin-top: 43px;
 }
