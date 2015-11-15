@@ -77,7 +77,8 @@ body {
 
 
 .wrapper {
-  width: 1200px;
+  max-width: 1200px;
+  min-width: 768px;
   margin-left:auto;
   margin-right: auto;
   background-color: white;
@@ -99,17 +100,16 @@ body {
   margin: 0px;
   padding: 0px;
   font-size: 0;
-  padding-left: 72px;
-  padding-right: 72px;
+  padding-left: 6%;
+  padding-right: 6%;
   padding-top: 17px;
   padding-bottom: 19px;
-  text-align: center;
 }
 
 .main-navigation li {
   display:inline-block;
-  margin-right: 150px;
   font-size: 14px;
+  width: 20%;
 }
 
 .main-navigation a {
@@ -119,13 +119,15 @@ body {
   color: black;
 }
 
-.main-navigation .offset {
-  margin-right: 390px;
+.offset {
+  margin-right: 20%;
 }
 
-.main-navigation li:last-child {
-  margin-right: 0px;
+.main-navigation li:nth-child(3),
+.main-navigation li:nth-child(4) {
+  text-align: right;
 }
+
 
 .main-navigation a:hover {
   color: #81b3d2
@@ -151,10 +153,10 @@ body {
 
 .promo {
   background: #d9eaf2 url("../img/welcome-sedona-bg.jpg") no-repeat;
-  width: 1200px;
   height: 431px;
   position: relative;
   padding-top: 77px;
+  background-size: cover;
 }
 
 .promo img {
@@ -171,14 +173,13 @@ body {
 .promo:after {
   content: "";
   display: block;
-  width: 1200px;
+  width: 100%;
   height: 57px;
   background: url("../img/zigzag.png") no-repeat;
   position: absolute;
   left: 0;
   bottom: 0;
-  /* position:relative; */
-  /* bottom: -95px; */
+  background-size: 100% 57px;
 }
 
 .reasons {
@@ -187,8 +188,8 @@ body {
 
 .reasons-header {
   background-color: white;
-  padding-left: 312px;
-  padding-right: 312px;
+  width: 576px;
+  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 40px;
 }
@@ -223,9 +224,10 @@ figure {
 }
 
 .reason {
-  width: 284px;
-  padding-left: 58px;
-  padding-right: 58px;
+  width: 33.333333%;
+  padding-left: 5.5%;
+  padding-right: 5.5%;
+  box-sizing: border-box;
   font-size: 14px;
   line-height: 21px;
 }
@@ -234,13 +236,14 @@ figure {
   font-size: 21px;
   font-weight: bold;
   color: #000000;
-  padding-left: 66px;
-  padding-right: 66px;
   padding-bottom: 22px;
+  width: 166px;
+  margin: 0 auto;
 }
 
 .reason-image {
-  width: 800px;
+  width: 66.666666%;
+  overflow: hidden;
 }
 
 .reason-row-image {
@@ -308,6 +311,8 @@ figure {
   background-color: white;
   text-align: center;
   line-height: 24px;
+  width: 568px;
+  margin: 0 auto;
 }
 
 .search h2 {
@@ -350,22 +355,24 @@ figure {
 
 
 .map {
-  width: 1200px;
   height: 593px;
   position: relative;
 }
 
 .map .map-canvas {
-  width: 1200px;
   height: 593px;
 }
 
-.map .form {
+.form {
+  display: none;
   width: 458px;
   background: white;
   position: absolute;
   top: 0px;
-  left: 316px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding: 55px;
   box-shadow: 0px 2px 5px 0px #D4D2D2;
   color: black;
@@ -373,6 +380,10 @@ figure {
   font-weight: bold;
   text-align: right;
 
+}
+
+.form-show {
+  display: block;
 }
 
 input.booking-calendar[type="text"] {
@@ -390,16 +401,6 @@ input.booking-calendar[type="text"] {
   font-family: "PT Sans", "Arial", sans-serif;
   line-height: 26px;
   outline: none;
-}
-
-input.booking-calendar:focus {
-  border-color: 2px solid #e5e5e5;
-  background: white;
-}
-
-input.booking-calendar:hover {
-  background: #ebebeb;
-  border-color: 2px solid #ebebeb;
 }
 
 .icon-calendar {
@@ -476,9 +477,25 @@ input.booking-calendar-select[type="text"] {
   font-family: "PT Sans", "Arial", sans-serif;
   line-height: 26px;
   outline: none;
+  padding: 5px 1px;
 }
 
+input.booking-calendar:focus,
+input.booking-calendar-select:focus,
+input.booking-calendar:focus:hover,
+input.booking-calendar-select:focus:hover {
+  border-color: 2px solid #e5e5e5;
+  background: white;
+}
 
+input.booking-calendar:hover {
+  background: #ebebeb;
+  border-color: 2px solid #ebebeb;
+}
+
+input.booking-calendar-select:hover {
+  background: #ebebeb;
+}
 
 .form-btn-blue {
   border: none;
@@ -496,17 +513,16 @@ input.booking-calendar-select[type="text"] {
 
   /* ------------------ блок для футера для всех страниц ------------------ */
 .main-footer {
-  width: 1200px;
-  position: relative;
   background: rgba(254, 254, 254, 0.9);
-  bottom: 0px;
-  left: 0px;
   font-size: 0;
   padding: 36px 0;
 }
 
 .map .main-footer {
   position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
 }
 
 .hashtag {
@@ -540,6 +556,7 @@ input.booking-calendar-select[type="text"] {
   vertical-align: middle;
   padding: 15px 2px;
   line-height: 1em;
+  text-decoration: none;
 }
 
 .social a.social-btn:hover {
@@ -589,23 +606,25 @@ input.booking-calendar-select[type="text"] {
 
 .filters {
   background: #766357 url("../img/filters-hotels.jpg") no-repeat;
-  width: 1056px;
+  background-size: cover;
   height: 191px;
   color: white;
   padding-top: 26px;
-  padding-left: 72px;
-  padding-right: 72px;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 .filters-column {
   float: left;
-  margin-right: 99px;
-  width: 140px;
+  box-sizing: border-box;
+  width: 186px;
+  margin-right: 2%;
+
 }
 
 .filters-price {
   float: right;
-  width: 330px;
+  width: 30.8%;
 }
 
 .clearfix:after {
@@ -634,14 +653,16 @@ input.booking-calendar-select[type="text"] {
 
 .filters input[type="checkbox"] + label:before {
   content: '\2610';
-  margin-right: 17px;
   font-family: "symbols-sedona";
   font-size: 24px;
   color: white;
   opacity: 0.7;
+  width: 40px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.filters input[type="checkbox"]:hover + label:before {
+.filters input[type="checkbox"] + label:hover:before {
   opacity: 1;
 }
 
@@ -662,12 +683,13 @@ input.booking-calendar-select[type="text"] {
   border: 2px solid white;
   border-radius: 3px;
   text-align: center;
-  width: 314px;
+  width: 98%;
   padding: 5px 0px;
+  box-sizing: border-box;
 }
 
 .price-frame-input {
-  width: 150px;
+  width: 47%;
   display: inline-block;
   vertical-align: middle;
 }
@@ -687,29 +709,29 @@ input.booking-calendar-select[type="text"] {
   width: 40px;
   color: white;
   border: none;
+  outline: none;
 }
 
 .price-frame,
 .range-controls {
-  margin-left: 10px;
+  margin-left: 2%;
 }
 
 .range-controls{
-  width: 318px;
+  width: 98%;
   padding-top: 20px;
   padding-bottom: 32px;
   position: relative;
 }
 
 .range-controls .scale {
-  width: 100%;
   height: 2px;
   background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .scale .bar {
   background: white;
-  width: 240px;
+  width: 73%;
   height: 2px;
 }
 
@@ -726,29 +748,30 @@ input.booking-calendar-select[type="text"] {
 }
 
 .max-toggle {
-    left: 230px;
+    left: 73%;
 }
 
 .toggle:hover {
   background:#1c4f80;
 }
 
-.btn-transparent {
+a.btn-transparent {
   border: 2px solid white;
   padding: 6px 35px;
   background: none;
+  outline: none;
   font-size: 14px;
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
   display: block;
+  text-decoration: none;
+  color: white;
+  width: 63px;
 }
 
-
-
-
 .search-results, .hotel {
-  padding: 31px 72px;;
+  padding: 29px 6%;
   border-bottom: 2px solid #e5e5e5;
 }
 
@@ -777,10 +800,6 @@ input.booking-calendar-select[type="text"] {
   font-size: 21px;
   font-weight: bold;
   width: 135px;
-}
-
-.search-results-center {
-  width: 700px;
 }
 
 .search-results-center ul {
@@ -872,10 +891,6 @@ input.booking-calendar-select[type="text"] {
 .hotel-image {
   width: 135px;
   height: 90px;
-}
-
-.hotel-content {
-  width: 700px;
 }
 
 .hotel-content > a {

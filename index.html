@@ -7,7 +7,7 @@
 		<meta name="description" content="Сервис поиска лучших предложений гостиниц в Седоне">
 		<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.min.css">
 
 	</head>
 
@@ -17,12 +17,12 @@
 			<!-- Хедер-->
 			<header class="main-header">
 				<nav class="main-navigation">
-					<figure class="logo"><a href="#"><img src="img/logo.png" alt="logo" width="138" height="70"></a></figure>
+					<figure class="logo"><a href="index.html"><img src="img/logo.png" alt="logo" width="138" height="70"></a></figure>
 					<ul>
 						<li><a href="#">Информация</a></li>
 						<li class="offset"><a href="#">Фото и видео</a></li>
 						<li><a href="#">Карта штата</a></li>
-						<li><a href="#">Гостиницы</a></li>
+						<li><a href="sedona-hotels.html">Гостиницы</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -73,7 +73,7 @@
 					<div class="reason">
 						<h2 class="reason-title">Там есть мост дьявола</h2>
 						<div class="reason-number">– №2 –</div>
-						<p>Да, по нему можно пройти!<br>Если конечно Вы осмелитесь</p>
+						<p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
 					</div>
 				</div>
 
@@ -86,10 +86,10 @@
 					<div class="reason">
 						<h2 class="reason-title">Красивая дорога</h2>
 						<div class="reason-number">– №4 –</div>
-						<p>Ехать в Седону из Лас-Вегаса совсем<br>не скучно!</p>
+						<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 					</div>
 					<div class="reason">
-						<h2 class="reason-title">Мало туристов</h2>
+						<h2 class="reason-title">Мало<br>туристов</h2>
 						<div class="reason-number">– №5 –</div>
 						<p>Большинство едет в Гранд Каньон и толпится там</p>
 					</div>
@@ -98,13 +98,13 @@
 
 			<div class="search">
 				<h2 class="search-title">Заинтересовались?</h2>
-				<p>Укажите предполагаемые даты поездки,<br> и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+				<p>Укажите предполагаемые даты поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
 				<a href="#" class="search-btn">Поиск гостиницы в Седоне</a>
 			</div>
 
 			<div class="map">
 				<div class="map-canvas">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591938.158762296!2d-111.94959381352574!3d34.95592605864562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ%2C+USA!5e0!3m2!1sen!2sru!4v1446837046152" width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591938.158762296!2d-111.94959381352574!3d34.95592605864562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ%2C+USA!5e0!3m2!1sen!2sru!4v1446837046152" width="100%" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 
 				<div class="form">
@@ -125,7 +125,7 @@
 								<label for="ch3">Взрослые:</label>
 								<div class="booking-calendar-minus-plus">
 									<button class="btn-grey" type="button"><i class="icon-minus"></i></button>
-									<input class="booking-calendar-select" name="adults" type="text" placeholder="2" id="ch3"/>
+									<input class="booking-calendar-select" name="adults" type="text" value="2" id="ch3"/>
 									<button class="btn-grey" type="button"><i class="icon-plus"></i></button>
 								</div>
 							</div>
@@ -133,7 +133,7 @@
 							<label for="ch4">Дети:</label>
 							<div class="booking-calendar-minus-plus">
 								<button class="btn-grey" type="button"><i class="icon-minus"></i></button>
-								<input class="booking-calendar-select" name="children" type="text" placeholder="0" id="ch4"/>
+								<input class="booking-calendar-select" name="children" type="text" value="0" id="ch4"/>
 								<button class="btn-grey" type="button"><i class="icon-plus"></i></button>
 							</div>
 					</div>
@@ -154,5 +154,8 @@
 			</div>
 
 		</div>
+
+		<script src="js/booking.min.js"></script>
+
 	</body>
 </html>
