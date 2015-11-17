@@ -429,20 +429,28 @@ body {
 
 @-webkit-keyframes bounce {
   0% {
-    transform: translateX(-2000px);
+    -webkit-transform: translateX(-2000px);
+        -ms-transform: translateX(-2000px);
+            transform: translateX(-2000px);
   }
   100% {
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
 @keyframes bounce {
   0% {
-    transform: translateX(-2000px);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+     -webkit-transform: translateX(-2000px);
+         -ms-transform: translateX(-2000px);
+             transform: translateX(-2000px);
+   }
+   100% {
+     -webkit-transform: translateX(-50%);
+         -ms-transform: translateX(-50%);
+             transform: translateX(-50%);
+   }
 }
 
 input.booking-calendar[type="text"] {
@@ -523,7 +531,7 @@ input.booking-calendar[type="text"] {
 }
 
 input.booking-calendar-select[type="text"] {
-  width: 30px;
+  width: 26px;
   padding: 5px 1px;
   font-weight: bold;
   font-size: 14px;
@@ -534,23 +542,20 @@ input.booking-calendar-select[type="text"] {
   color: black;
   text-transform: uppercase;
   background: #f2f2f2;
-  border: none;
+  border: 2px solid #f2f2f2;
   outline: none;
 }
 
 input.booking-calendar:focus, input.booking-calendar-select:focus,
 input.booking-calendar:focus:hover, input.booking-calendar-select:focus:hover {
   background: white;
-  border-color: 2px solid #e5e5e5;
+  border: 2px solid #e5e5e5;
 }
 
-input.booking-calendar:hover {
-  background: #ebebeb;
-  border-color: 2px solid #ebebeb;
-}
-
+input.booking-calendar:hover,
 input.booking-calendar-select:hover {
   background: #ebebeb;
+  border: 2px solid #ebebeb;
 }
 
 .form-btn-blue {
@@ -659,7 +664,7 @@ input.booking-calendar-select:hover {
 /* ------------------ блок для cтраницы поиска отелей ------------------ */
 
 .filters {
-  height: 191px;
+  padding-bottom: 30px;
   padding-top: 26px;
   padding-right: 6%;
   padding-left: 6%;
@@ -825,9 +830,14 @@ input.booking-calendar-select:hover {
   border-bottom: 2px solid #e5e5e5;
 }
 
-.search-results-left, .search-results-center, .hotel-image, .hotel-content {
+.search-results-left, .search-results-center, .hotel-image {
   float: left;
   margin-right: 32px;
+}
+
+.hotel-content {
+  float: left;
+  max-width: 264px;
 }
 
 .search-results-right, .hotel-rating {
@@ -884,18 +894,18 @@ input.booking-calendar-select:hover {
 }
 
 .search-results-center a:hover,
-.search-results-center .search-results-sort-active a:hover {
+.search-results-sort-active a:hover {
   color: #81b3d2;
   border-bottom: 1px dashed #81b3d2;
 }
 
 .search-results-center a:active,
-.search-results-center .search-results-sort-active a:active {
+.search-results-sort-active a:active {
   color: black;
   border-bottom: none;
 }
 
-.search-results-center .search-results-sort-active a {
+.search-results-sort-active a {
   color: #81b3d2;
   border-bottom: none;
 }
